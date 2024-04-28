@@ -8,7 +8,7 @@ const MONGO_URL = 'mongodb+srv://xyzenapis:xyzen@cluster0.0uplkml.mongodb.net/';
 
 // Initialize opts and db
 global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse());
-global.db = new Low(new JSONFile('src/database/database.json'));
+global.db = new Low(new JSONFile('../src/database/database.json'));
 
 // Initialize DATABASE and loadDatabase
 global.DATABASE = global.db;
