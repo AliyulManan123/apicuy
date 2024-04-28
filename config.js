@@ -4,11 +4,11 @@ import { dirname } from 'path';
 global.__filename = fileURLToPath(import.meta.url);
 global.__dirname = dirname(__filename);
 
-global.host = "https://api.xyzen.tech"
+global.host = "https://shanapi.vercel.app"
 
-global.creator = "xyzendev"
+global.creator = "ihsan"
 
-global.key = 'adriankasep'
+global.key = 'shanbot'
 
 global.limit = {
     free: 15,
