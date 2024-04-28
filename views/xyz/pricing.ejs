@@ -1,0 +1,32 @@
+<div class="flex flex-col gap-8">
+    <div class="flex flex-col gap-2 md:gap-4">
+        <div class="text-center font-semibold text-primary text-2xl">Ready to get started?</div>
+        <div class="text-center text-gray-400 text-base md:text-xl">Choose a plan that suits your needs</div>
+    </div>
+    <div class="flex gap-4 justify-center items-center flex-col md:flex-row">
+        <%- include('../partials/pricing-details.ejs', { plans: [
+            { name: 'Free', price: 'Rp0,-', details: [
+                { label: 'Requests', value: '10/day' },
+                { label: 'Custom Api Key', value: 'No' },
+                { label: 'Premium Features', value: 'No' },
+                { label: 'VIP Features', value: 'No' },
+                { label: 'Expired', value: '-' },
+            ] },
+            { name: 'Premium', price: 'Rp10.000,-', details: [
+                { label: 'Requests', value: '1000/day' },
+                { label: 'Custom Api Key', value: 'Yes' },
+                { label: 'Premium Features', value: 'Yes' },
+                { label: 'VIP Features', value: 'No' },
+                { label: 'Expired', value: '30Days' },
+            ] },
+            { name: 'VIP', price: 'Rp25.000,-', details: [
+                { label: 'Requests', value: '9999/day' },
+                { label: 'Custom Api Key', value: 'Yes' },
+                { label: 'Premium Features', value: 'Yes' },
+                { label: 'VIP Features', value: 'Yes' },
+                { label: 'Expired', value: '30Days' },
+            ] },
+        ] }) %>
+    </div>
+</div>
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:;">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="./assets/tailwand/css/12lsxzalwaosck.css">
+    <title>Upload - Adrian RestAPI</title>
+</head>
+<body class="flex justify-center items-center min-h-screen background px-4 py-8">
+    <div class="w-full max-w-md">
+        <div class="text-3xl font-semibold mb-6 text-primary text-center">Uploader</div>
+        <form action="/api/upload" name="image" method="post" enctype="multipart/form-data">
+            <label for="file" class="block mb-2 text-sm font-medium text-gray-600">Choose a file:</label>
+            <input type="file" name="file" id="file" accept="image/*" class="border border-gray-300 p-2 rounded w-full mb-4">
+            <button type="submit" class="bg-primary text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue active:bg-blue-800 w-full">Upload</button>
+        </form>
+    </div>
+</body>
+</html>

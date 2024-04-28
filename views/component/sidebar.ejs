@@ -1,0 +1,56 @@
+<div class="fixed shadow-lg bg-white md:relative z-50 w-0 md:w-72 h-screen background overflow-y-auto border-r p-4 select-none invisible opacity-0 md:visible md:opacity-100 transition-[width,opacity,visibility,background-color] duration-300" id="sideBar">
+    <div class="text-2xl text-center mt-4 font-semibold">xyzen<span class="text-primary">api.</span></div>
+    <div class="mt-8">
+        <ul class="text-black font-semibold">
+            <% const menuItems = [
+                { icon: "dashboard", label: "Dashboard", href: "/dashboard" },
+                { icon: "pricing", label: "Pricing", href: "/pricing" },
+                { icon: "changelog", label: "Changelog", href: "/changelog" }
+            ]; %>
+            <% menuItems.forEach(item => { %>
+                <li class="rounded-xl relative flex items-center my-2 cursor-pointer hover:bg-gray-200 transition-colors duration-700">
+                    <a href="<%= item.href %>" class="flex items-center w-full h-full">
+                        <div class="h-10 flex items-center ml-2 text-base">
+                            <i class="bx <%= getBoxiconClass(item.icon) %>"></i>
+                            <div class="ml-3 text-sm" bis_skin_checked="1"><%= item.label %></div>
+                        </div>
+                    </a>
+                </li>
+            <% }); %>
+        </ul>
+        <hr class="my-4 text-gray-700" />
+        <ul class="mt-8 text-black font-semibold">
+            <% const additionalMenuItems = [
+                { icon: "downloader", label: "Downloader", href: "/pages/downloader" },
+                { icon: "generate", label: "Generate", href: "/pages/generate" },
+                { icon: "islami", label: "Islami", href: "/pages/islami" },
+                { icon: "searcher", label: "Searcher", href: "/pages/searcher" },
+                { icon: "other", label: "Other", href: "/pages/other" }
+            ]; %>
+            <% additionalMenuItems.forEach(item => { %>
+                <li class="rounded-xl relative flex items-center my-2 cursor-pointer hover:bg-gray-200 transition-colors duration-700">
+                    <a href="<%= item.href %>" class="flex items-center w-full h-full">
+                        <div class="h-10 flex items-center ml-2 text-base">
+                            <i class="bx <%= getBoxiconClass(item.icon) %>"></i>
+                            <div class="ml-3 text-sm" bis_skin_checked="1"><%= item.label %></div>
+                        </div>
+                    </a>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</div>
+
+<% function getBoxiconClass(icon) {
+    switch (icon) {
+        case "dashboard": return "bx-tachometer";
+        case "pricing": return "bx-dollar";
+        case "changelog": return "bx-file";
+        case "downloader": return "bx-download";
+        case "other": return "bx-code";
+        case "generate": return "bx-code-alt";
+        case "islami": return "bx-moon";
+        case "searcher": return "bx-search"
+        default: return "";
+    }
+} %>

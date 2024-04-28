@@ -1,0 +1,22 @@
+<% data.forEach((item, index) => { %>
+    <tr class="border-b last:border-none background hover:brightness-95 dark:hover:brightness-125 text-gray-600 dark:text-gray-400 group">
+        <td class="py-4 px-4 md:px-1 text-center"><%= index + 1 %></td>
+        <td class="py-4 px-6 whitespace-nowrap"><%= item.name %></td>
+        <td class="py-4 px-6 whitespace-nowrap"><%= item.description %></td>
+        <td class="py-4 px-6 flex gap-2 items-center">
+            <div class="rounded-xl px-2 py-1 text-xs text-white transition-none bg-blue-500 group-hover:bg-blue-700"><%= item.method %></div>
+        </td>
+        <td class="py-4 px-6 whitespace-nowrap lg:whitespace-normal"><%= item.someValue1 %></td>
+        <td class="py-4 px-6 whitespace-nowrap lg:whitespace-normal lg:max-w-xs"><%= item.someValue2 %></td>
+        <td class="py-4 px-6">
+            <div class="<%= item.status === 'active' ? 'bg-success' : 'bg-inactive' %> capitalize w-fit px-2 py-1 text-white text-xs rounded-xl font-semibold"><%= item.status %></div>
+        </td>
+        <td class="py-4 px-6 flex">
+            <a href="<%= item.link %>" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="18" height="18" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986z"></path>
+                </svg>
+            </a>
+        </td>
+    </tr>
+<% }); %>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./meta.ejs', { pageTitle: 'P'}) %>
+</head>
+<body>
+    <div class="min-h-screen w-full text-center items-center justify-center flex">
+        <div class="font-semibold">
+            <button id="buttonPopup">Push</button>
+        </div>
+        <div class="opacity-0 px-4 m-4 bg-white shadow-lg scale-150" id="popup">
+            <div class="">Adrian</div>
+        </div>
+    </div>
+    <script>
+        var a = document.getElementById('buttonPopup');
+        var b = document.getElementById('popup');
+
+        if (a && b)  {
+            a.addEventListener('click', function() {
+                b.classList.toggle('opacity-0');
+                b.classList.toggle('opacity-100')
+            })
+        }
+    </script>
+</body>
+</html> 

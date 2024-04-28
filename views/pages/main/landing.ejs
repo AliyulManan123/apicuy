@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../../global/meta.ejs', { pageTitle: 'Landing - Adrian Rest API' }) %>
+</head>
+<body>
+    <div class="min-h-screen bg-white">
+        <%- include('../../component/header.ejs') %>
+        <div class="px-8 md:px-44 pt-44 pb-16 flex flex-col gap-24">
+            <%- include('../../xyz/landing.ejs') %>
+            <%- include('../../xyz/pricing.ejs') %>
+            <%- include('../../xyz/about.ejs') %>
+        </div>
+        <%- include('../../component/footer.ejs') %>
+    </div>
+    
+    <script src="/assets/script.js"></script>
+</body>
+</html>

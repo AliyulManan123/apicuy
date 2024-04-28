@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../../global/meta.ejs', { pageTitle: 'Profile - Adrian Rest API' }) %>
+</head>
+<body>
+    <div class="w-screen h-screen background flex flex-row overflow-x-hidden">
+        <%- include('../../component/sidebar.ejs') %>
+        <div class="effect-2 w-full">
+            <div class="opacity:1;transform:none">
+                <div class="w-full h-screen overflow-y-scroll">
+                    <%- include('../../component/navbar.ejs', { TitlePage: 'Generate', nick: "Users", email: "users@xyzen.tech", ImageProfile: "https://i.pinimg.com/236x/56/2e/be/562ebed9cd49b9a09baa35eddfe86b00.jpg"}) %>
+                    <div class="p-4 md:px-8 z-30 background">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
